@@ -11,6 +11,21 @@
     />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+    <!-- Aplica el tema guardado antes del primer render para evitar parpadeo -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('portfolio-theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+          }
+          if (t === 'dark') document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Tipografía Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

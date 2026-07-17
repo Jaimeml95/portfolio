@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-home',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section class="mx-auto flex min-h-[70vh] max-w-3xl flex-col items-center justify-center px-6 text-center">
+    <section id="inicio" class="mx-auto flex min-h-[70vh] max-w-3xl flex-col items-center justify-center px-6 text-center">
       <span class="mb-4 inline-flex items-center rounded-full border border-border bg-surface px-4 py-1 text-sm font-medium text-muted">
         Fase 0 · Setup completado
       </span>

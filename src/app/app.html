@@ -1,2 +1,6 @@
-<!-- Shell de la aplicación. Header/footer se añadirán en la Fase 1. -->
-<router-outlet />
+<!-- Shell de la aplicación: header fijo, contenido enrutado y footer. -->
+<app-header />
+<main class="min-h-[calc(100vh-4rem)]">
+  <router-outlet />
+</main>
+<app-footer />
