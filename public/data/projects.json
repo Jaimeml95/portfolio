@@ -1,0 +1,50 @@
+[
+  {
+    "id": "portfolio-angular",
+    "title": "Portfolio personal",
+    "summary": "Este mismo sitio: portfolio en Angular 22 con Tailwind y dark mode.",
+    "description": "Portfolio personal construido con Angular 22 (standalone, signals, zoneless) y TailwindCSS v4. Incluye un sistema de diseño propio con tokens claro/oscuro, componentes reutilizables, carga de datos con httpResource y despliegue continuo. Pensado como muestra de código limpio y buenas prácticas.",
+    "technologies": ["Angular", "TypeScript", "TailwindCSS", "Signals"],
+    "image": "",
+    "repoUrl": "https://github.com",
+    "demoUrl": "",
+    "featured": true,
+    "date": "2026-07-01"
+  },
+  {
+    "id": "ecommerce-angular",
+    "title": "Tienda online",
+    "summary": "E-commerce con catálogo, carrito y checkout, estado con signals.",
+    "description": "Aplicación de comercio electrónico con listado de productos, filtros, ficha de producto, carrito persistente y proceso de checkout. Gestión de estado reactiva con signals y RxJS, formularios reactivos con validación y diseño totalmente responsive.",
+    "technologies": ["Angular", "TypeScript", "RxJS", "TailwindCSS"],
+    "image": "",
+    "repoUrl": "https://github.com",
+    "demoUrl": "https://example.com",
+    "featured": true,
+    "date": "2026-05-15"
+  },
+  {
+    "id": "dashboard-analitica",
+    "title": "Dashboard de analítica",
+    "summary": "Panel de métricas con gráficas interactivas y datos en tiempo real.",
+    "description": "Panel de control para visualización de métricas de negocio: gráficas interactivas, tablas con ordenación y filtrado, y actualización de datos en tiempo real. Arquitectura por features con lazy loading y componentes de presentación reutilizables.",
+    "technologies": ["Angular", "TypeScript", "SCSS", "Charts"],
+    "image": "",
+    "repoUrl": "https://github.com",
+    "demoUrl": "",
+    "featured": true,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "app-tiempo",
+    "title": "App del tiempo",
+    "summary": "Consulta la previsión meteorológica consumiendo una API REST.",
+    "description": "Aplicación del tiempo que consume una API REST pública para mostrar la previsión por ciudad. Búsqueda con autocompletado, geolocalización, manejo de estados de carga y error, y cacheo de peticiones.",
+    "technologies": ["Angular", "TypeScript", "REST API"],
+    "image": "",
+    "repoUrl": "https://github.com",
+    "demoUrl": "https://example.com",
+    "featured": false,
+    "date": "2026-01-20"
+  }
+]

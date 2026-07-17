@@ -6,7 +6,14 @@ export const routes: Routes = [
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
     title: 'Inicio · Portfolio',
   },
-  // Rutas futuras (Sobre mí, Proyectos, Contacto) se añadirán en próximas fases.
+  {
+    path: 'proyectos/:id',
+    loadComponent: () =>
+      import('./features/projects/project-detail/project-detail').then(
+        (m) => m.ProjectDetail,
+      ),
+    title: 'Proyecto · Portfolio',
+  },
   {
     path: '**',
     redirectTo: '',
