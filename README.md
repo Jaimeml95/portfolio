@@ -1,59 +1,41 @@
-# Portfolio
+# Portfolio · Angular + Tailwind
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.7.
+Portfolio personal de desarrollador front-end, construido como proyecto de demostración
+técnica para procesos de selección.
 
-## Development server
+## Stack
 
-To start a local development server, run:
+- **Angular 22** — standalone components, signals, nuevo control flow (`@if` / `@for`), zoneless
+- **TailwindCSS v4** — sistema de diseño propio con tokens (light/dark) vía CSS custom properties
+- **Angular CDK** — comportamientos accesibles (overlay, foco) sin estilos impuestos
+- **TypeScript** (modo estricto)
+- Iconos en SVG inline (sin dependencias de iconos)
 
-```bash
-ng serve
+## Arquitectura
+
+```
+src/app/
+├── core/        # servicios singleton y modelos (Project, ThemeService…)
+├── shared/      # componentes reutilizables (header, footer…)
+└── features/    # secciones lazy-loaded (home, about, projects, contact)
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Scripts
 
-## Code scaffolding
+| Comando          | Descripción                          |
+| ---------------- | ------------------------------------ |
+| `npm start`      | Servidor de desarrollo en `:4200`    |
+| `npm run build`  | Build de producción en `dist/`       |
+| `npm test`       | Tests unitarios (Vitest)             |
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Estado
 
-```bash
-ng generate component component-name
-```
+Proyecto en desarrollo por fases:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [x] **Fase 0** — Setup: Angular + Tailwind, sistema de diseño, routing, dark mode base
+- [ ] **Fase 1** — Layout: header, footer, toggle de tema
+- [ ] **Fase 2** — Home + Sobre mí
+- [ ] **Fase 3** — Proyectos (galería + detalle)
+- [ ] **Fase 4** — Contacto (formulario)
+- [ ] **Fase 5** — Pulido (responsive, SEO, CV)
+- [ ] **Fase 6** — Despliegue

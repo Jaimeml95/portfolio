@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* Dark mode activado por la clase .dark en <html> (lo controla ThemeService) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/* Design tokens — identidad propia (no "plantilla Tailwind genérica") */
+/* ------------------------------------------------------------------ */
+:root {
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --brand: #6366f1;
+  --brand-strong: #4f46e5;
+  --brand-foreground: #ffffff;
+  --accent: #14b8a6;
+}
+
+.dark {
+  --background: #0b1120;
+  --surface: #111827;
+  --surface-2: #1e293b;
+  --foreground: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --brand: #818cf8;
+  --brand-strong: #6366f1;
+  --brand-foreground: #0b1120;
+  --accent: #2dd4bf;
+}
+
+/* Exponemos los tokens como colores/fuentes de Tailwind.
+   `inline` mantiene la referencia var() para que el dark mode conmute en vivo. */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-accent: var(--accent);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
