@@ -35,7 +35,7 @@ import { Icon } from '../../../shared/components/icon/icon';
             ></span>
             <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
           </span>
-          Disponible para nuevos proyectos
+          Disponible para nuevas oportunidades
         </span>
 
         <h1

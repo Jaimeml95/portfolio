@@ -8,43 +8,67 @@ import { Profile } from '../models/profile.model';
  */
 export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/TU_ID';
 
-/**
- * Datos del perfil. Contenido de EJEMPLO: sustituye los valores por los tuyos.
- * (nombre, bio, enlaces reales, CV en /public/cv/cv.pdf, etc.)
- */
+/** Datos del perfil que alimentan hero, "Sobre mí", contacto y footer. */
 export const PROFILE: Profile = {
-  name: 'Tu Nombre',
-  role: 'Desarrollador Front-End',
-  location: 'España',
+  name: 'Jaime Moro López',
+  role: 'Desarrollador Full Stack Java Junior',
+  location: 'Sevilla, España',
   tagline:
-    'Construyo interfaces web modernas, accesibles y cuidadas al detalle con Angular.',
+    'Desarrollo backend con Java 17 y Spring Boot, y frontend con Angular. Busco mi primera oportunidad como desarrollador full stack Java.',
   bio: [
-    'Soy desarrollador front-end con foco en Angular y TypeScript. Me gusta ' +
-      'convertir ideas en productos usables, con código limpio y una experiencia ' +
-      'de usuario pulida.',
-    'Disfruto trabajando con sistemas de diseño, componentes reutilizables y ' +
-      'buenas prácticas (accesibilidad, rendimiento y testing). Este portfolio es, ' +
-      'de hecho, una muestra de cómo trabajo.',
+    'Desarrollador junior especializado en backend con Java 17 y Spring Boot, con ' +
+      'formación complementaria en frontend Angular, orientado a perfiles full stack Java.',
+    'Titulado en Desarrollo de Aplicaciones Multiplataforma (nota media 8,6/10) y con ' +
+      'más de 630 horas de formación certificada en el ecosistema Spring, Angular, testing ' +
+      'y Clean Code.',
+    'En reconversión profesional desde un entorno técnico y de alta exigencia (Ejército ' +
+      'del Aire), que me aporta disciplina, autonomía y capacidad de trabajo bajo presión.',
   ],
   cvUrl: 'cv/cv.pdf',
-  email: 'tucorreo@ejemplo.com',
+  email: 'jaimemorolopez@gmail.com',
   socials: [
-    { label: 'GitHub', href: 'https://github.com', icon: 'github' },
-    { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'linkedin' },
-    { label: 'Email', href: 'mailto:tucorreo@ejemplo.com', icon: 'mail' },
+    { label: 'GitHub', href: 'https://github.com/Jaimeml95', icon: 'github' },
+    { label: 'Email', href: 'mailto:jaimemorolopez@gmail.com', icon: 'mail' },
+    { label: 'Teléfono', href: 'tel:+34647046923', icon: 'phone' },
   ],
   stack: [
     {
-      name: 'Frontend',
-      items: ['Angular', 'TypeScript', 'JavaScript', 'RxJS', 'HTML', 'CSS'],
+      name: 'Backend',
+      items: [
+        'Java 17',
+        'Spring Boot 3',
+        'Spring Security',
+        'Hibernate / JPA',
+        'APIs REST',
+        'Maven',
+      ],
     },
     {
-      name: 'Estilos & UI',
-      items: ['TailwindCSS', 'SCSS', 'Responsive', 'Accesibilidad'],
+      name: 'Frontend',
+      items: [
+        'Angular',
+        'TypeScript',
+        'RxJS',
+        'Angular Material',
+        'TailwindCSS',
+        'Bootstrap 5',
+      ],
+    },
+    {
+      name: 'Bases de datos',
+      items: ['MySQL', 'PostgreSQL', 'MongoDB'],
+    },
+    {
+      name: 'Testing',
+      items: ['JUnit 5', 'Mockito', 'Selenium'],
     },
     {
       name: 'Herramientas',
-      items: ['Git', 'Vite', 'Node.js', 'Figma', 'Vitest'],
+      items: ['Git / GitHub', 'IntelliJ IDEA', 'Postman', 'Agile / Scrum'],
+    },
+    {
+      name: 'En aprendizaje',
+      items: ['Docker', 'Microservicios', 'Spring Cloud', 'Spring AI'],
     },
   ],
 };
