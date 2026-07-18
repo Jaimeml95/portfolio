@@ -65,6 +65,19 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Animación de aparición al hacer scroll (la activa la directiva appReveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* Respeta a quien prefiere menos movimiento */
 @media (prefers-reduced-motion: reduce) {
   html {

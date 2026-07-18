@@ -13,17 +13,18 @@ import {
 import { timeout } from 'rxjs';
 import { FORMSPREE_ENDPOINT, PROFILE } from '../../core/data/profile';
 import { Icon } from '../../shared/components/icon/icon';
+import { Reveal } from '../../shared/directives/reveal.directive';
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, Icon],
+  imports: [ReactiveFormsModule, Icon, Reveal],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section id="contacto" class="scroll-mt-16 bg-surface py-20">
       <div class="mx-auto max-w-5xl px-6">
-        <div class="mb-12 text-center">
+        <div appReveal class="mb-12 text-center">
           <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Contacto
           </h2>

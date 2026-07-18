@@ -1,20 +1,22 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PROFILE } from '../../core/data/profile';
+import { Reveal } from '../../shared/directives/reveal.directive';
 
 @Component({
   selector: 'app-about',
+  imports: [Reveal],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section id="sobre-mi" class="scroll-mt-16 bg-surface py-20">
       <div class="mx-auto max-w-4xl px-6">
-        <div class="mb-12 text-center">
+        <div appReveal class="mb-12 text-center">
           <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Sobre mí
           </h2>
           <div class="mx-auto mt-3 h-1 w-16 rounded-full bg-brand"></div>
         </div>
 
-        <div class="grid gap-12 md:grid-cols-5">
+        <div appReveal class="grid gap-12 md:grid-cols-5">
           <!-- Bio -->
           <div class="space-y-4 md:col-span-3">
             @for (paragraph of profile.bio; track $index) {

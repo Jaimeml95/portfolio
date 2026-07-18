@@ -2,11 +2,13 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  effect,
   inject,
   input,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProjectsService } from '../../../core/services/projects.service';
+import { SeoService } from '../../../core/services/seo.service';
 import { Icon } from '../../../shared/components/icon/icon';
 
 @Component({
@@ -98,11 +100,25 @@ import { Icon } from '../../../shared/components/icon/icon';
 })
 export class ProjectDetail {
   protected readonly projectsService = inject(ProjectsService);
+  private readonly seo = inject(SeoService);
 
   /** id del proyecto, enlazado desde el parámetro de ruta :id. */
   readonly id = input.required<string>();
 
   protected readonly project = this.projectsService.getById(this.id);
+
+  constructor() {
+    // Actualiza el SEO en cuanto el proyecto está disponible.
+    effect(() => {
+      const project = this.project();
+      if (project) {
+        this.seo.update({
+          title: `${project.title} · Portfolio`,
+          description: project.summary,
+        });
+      }
+    });
+  }
 
   protected readonly formattedDate = computed(() => {
     const project = this.project();

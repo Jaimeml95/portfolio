@@ -7,15 +7,16 @@ import {
 } from '@angular/core';
 import { ProjectsService } from '../../../core/services/projects.service';
 import { ProjectCard } from '../../../shared/components/project-card/project-card';
+import { Reveal } from '../../../shared/directives/reveal.directive';
 
 @Component({
   selector: 'app-projects-section',
-  imports: [ProjectCard],
+  imports: [ProjectCard, Reveal],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section id="proyectos" class="scroll-mt-16 py-20">
       <div class="mx-auto max-w-6xl px-6">
-        <div class="mb-10 text-center">
+        <div appReveal class="mb-10 text-center">
           <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Proyectos
           </h2>
