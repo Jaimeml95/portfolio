@@ -3,12 +3,12 @@ import { RouterLink } from '@angular/router';
 import { Project } from '../../../core/models/project.model';
 import { Icon } from '../icon/icon';
 
-/** Degradados para el banner cuando el proyecto no tiene imagen. */
+/** Degradados sobrios para el banner cuando el proyecto no tiene imagen. */
 const GRADIENTS = [
-  'from-indigo-500 to-purple-500',
-  'from-sky-500 to-teal-400',
-  'from-rose-500 to-orange-400',
-  'from-emerald-500 to-lime-400',
+  'from-blue-600 to-indigo-700',
+  'from-sky-600 to-blue-700',
+  'from-slate-700 to-slate-900',
+  'from-cyan-600 to-teal-700',
 ];
 
 @Component({

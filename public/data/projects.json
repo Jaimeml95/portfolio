@@ -16,7 +16,7 @@
     "title": "API REST con Spring Boot",
     "summary": "API REST desplegada en producción con Spring Security (JWT + Google Sign-In), 83 tests y CI/CD.",
     "description": "API REST en desarrollo incremental activo, desplegada en producción (Render + PostgreSQL). Incluye Spring Security (JWT y Google Sign-In), arquitectura en capas, manejo centralizado de excepciones, 83 tests automatizados y CI/CD con GitHub Actions. Nota: al usar el free tier de Render, la primera petición tras un periodo de inactividad puede tardar entre 1 y 5 minutos en responder.",
-    "technologies": ["Java 17", "Spring Boot", "Spring Security", "PostgreSQL", "JUnit", "GitHub Actions"],
+    "technologies": ["Java 21/17", "Spring Boot", "Spring Security", "PostgreSQL", "JUnit", "GitHub Actions"],
     "image": "",
     "repoUrl": "https://github.com/Jaimeml95",
     "demoUrl": "https://appboxeo-api.onrender.com/swagger-ui/index.html",

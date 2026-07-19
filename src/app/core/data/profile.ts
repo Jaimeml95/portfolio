@@ -14,9 +14,9 @@ export const PROFILE: Profile = {
   role: 'Desarrollador Full Stack Java Junior',
   location: 'Sevilla, España',
   tagline:
-    'Desarrollo backend con Java 17 y Spring Boot, y frontend con Angular. Busco mi primera oportunidad como desarrollador full stack Java.',
+    'Desarrollo backend con Java 21/17 y Spring Boot, y frontend con Angular. Busco mi primera oportunidad como desarrollador full stack Java.',
   bio: [
-    'Desarrollador junior especializado en backend con Java 17 y Spring Boot, con ' +
+    'Desarrollador junior especializado en backend con Java 21/17 y Spring Boot, con ' +
       'formación complementaria en frontend Angular, orientado a perfiles full stack Java.',
     'Titulado en Desarrollo de Aplicaciones Multiplataforma (nota media 8,6/10) y con ' +
       'más de 630 horas de formación certificada en el ecosistema Spring, Angular, testing ' +
@@ -35,7 +35,7 @@ export const PROFILE: Profile = {
     {
       name: 'Backend',
       items: [
-        'Java 17',
+        'Java 21/17',
         'Spring Boot 3',
         'Spring Security',
         'Hibernate / JPA',
