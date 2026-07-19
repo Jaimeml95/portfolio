@@ -27,7 +27,9 @@ import { TechMarquee } from '../../shared/components/tech-marquee/tech-marquee';
             <div class="mt-10 flex flex-1 items-center md:mt-0">
               <div class="space-y-4">
                 @for (paragraph of profile.bio; track $index) {
-                  <p class="text-lg leading-relaxed text-muted">{{ paragraph }}</p>
+                  <p class="text-lg leading-relaxed text-muted text-justify hyphens-auto">
+                    {{ paragraph }}
+                  </p>
                 }
                 <p class="pt-2 text-sm font-medium text-muted">
                   📍 {{ profile.location }}

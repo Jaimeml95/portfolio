@@ -77,7 +77,9 @@ import { Icon } from '../../../shared/components/icon/icon';
 
         <div class="mt-10 border-t border-border pt-8">
           <h2 class="mb-3 text-xl font-bold text-foreground">Descripción</h2>
-          <p class="text-lg leading-relaxed text-muted">{{ p.description }}</p>
+          <p class="text-lg leading-relaxed text-muted text-justify hyphens-auto">
+            {{ p.description }}
+          </p>
         </div>
       } @else {
         <!-- No encontrado -->
