@@ -23,7 +23,7 @@ import { TechMarquee } from '../../shared/components/tech-marquee/tech-marquee';
             <!-- Carrusel de logos de tecnologías (bucle continuo) -->
             <app-tech-marquee />
 
-            <div class="mt-8 space-y-4">
+            <div class="mt-12 space-y-4">
               @for (paragraph of profile.bio; track $index) {
                 <p class="text-lg leading-relaxed text-muted">{{ paragraph }}</p>
               }

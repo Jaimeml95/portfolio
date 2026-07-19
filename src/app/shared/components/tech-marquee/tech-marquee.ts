@@ -15,19 +15,19 @@ interface TechLogo {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div
-      class="marquee marquee-mask overflow-hidden py-3"
+      class="marquee marquee-mask overflow-hidden py-4"
       aria-hidden="true"
     >
-      <ul class="marquee-track items-center gap-10">
+      <ul class="marquee-track items-center gap-14">
         @for (logo of loop; track $index) {
           <li class="flex shrink-0 items-center">
             <img
               [src]="logo.src"
               [alt]="logo.name"
               [title]="logo.name"
-              class="h-11 w-auto opacity-85 transition duration-300 hover:opacity-100"
-              width="44"
-              height="44"
+              class="h-22 w-auto opacity-85 transition duration-300 hover:opacity-100"
+              width="88"
+              height="88"
               loading="lazy"
               draggable="false"
             />
