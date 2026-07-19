@@ -18,9 +18,9 @@ interface TechLogo {
       class="marquee marquee-mask overflow-hidden py-4"
       aria-hidden="true"
     >
-      <ul class="marquee-track items-center gap-14">
+      <ul class="marquee-track items-center">
         @for (logo of loop; track $index) {
-          <li class="flex shrink-0 items-center">
+          <li class="flex shrink-0 items-center pe-14">
             <img
               [src]="logo.src"
               [alt]="logo.name"
@@ -49,7 +49,6 @@ export class TechMarquee {
     { name: 'TypeScript', src: 'images/tech/typescript.svg' },
     { name: 'JavaScript', src: 'images/tech/javascript.svg' },
     { name: 'Tailwind CSS', src: 'images/tech/tailwindcss.svg' },
-    { name: 'Bootstrap', src: 'images/tech/bootstrap.svg' },
     { name: 'Git', src: 'images/tech/git.svg' },
     { name: 'Docker', src: 'images/tech/docker.svg' },
     { name: 'IntelliJ IDEA', src: 'images/tech/intellij.svg' },

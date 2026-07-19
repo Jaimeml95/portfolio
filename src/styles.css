@@ -92,6 +92,7 @@ body {
   display: flex;
   width: max-content;
   animation: marquee 34s linear infinite;
+  will-change: transform;
 }
 
 .marquee:hover .marquee-track {

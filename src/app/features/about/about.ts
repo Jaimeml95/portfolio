@@ -19,17 +19,20 @@ import { TechMarquee } from '../../shared/components/tech-marquee/tech-marquee';
 
         <div appReveal class="grid gap-12 md:grid-cols-5">
           <!-- Bio -->
-          <div class="md:col-span-3">
+          <div class="flex flex-col md:col-span-3">
             <!-- Carrusel de logos de tecnologías (bucle continuo) -->
             <app-tech-marquee />
 
-            <div class="mt-12 space-y-4">
-              @for (paragraph of profile.bio; track $index) {
-                <p class="text-lg leading-relaxed text-muted">{{ paragraph }}</p>
-              }
-              <p class="pt-2 text-sm font-medium text-muted">
-                📍 {{ profile.location }}
-              </p>
+            <!-- El texto se centra verticalmente en el espacio restante (escritorio) -->
+            <div class="mt-10 flex flex-1 items-center md:mt-0">
+              <div class="space-y-4">
+                @for (paragraph of profile.bio; track $index) {
+                  <p class="text-lg leading-relaxed text-muted">{{ paragraph }}</p>
+                }
+                <p class="pt-2 text-sm font-medium text-muted">
+                  📍 {{ profile.location }}
+                </p>
+              </div>
             </div>
           </div>
 
