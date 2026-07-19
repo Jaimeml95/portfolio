@@ -49,6 +49,7 @@ export class TechMarquee {
     { name: 'TypeScript', src: 'images/tech/typescript.svg' },
     { name: 'JavaScript', src: 'images/tech/javascript.svg' },
     { name: 'Tailwind CSS', src: 'images/tech/tailwindcss.svg' },
+    { name: 'Bootstrap', src: 'images/tech/bootstrap.svg' },
     { name: 'Git', src: 'images/tech/git.svg' },
     { name: 'Docker', src: 'images/tech/docker.svg' },
     { name: 'IntelliJ IDEA', src: 'images/tech/intellij.svg' },
