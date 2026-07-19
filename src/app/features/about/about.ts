@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PROFILE } from '../../core/data/profile';
 import { Reveal } from '../../shared/directives/reveal.directive';
+import { TechMarquee } from '../../shared/components/tech-marquee/tech-marquee';
 
 @Component({
   selector: 'app-about',
-  imports: [Reveal],
+  imports: [Reveal, TechMarquee],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section id="sobre-mi" class="scroll-mt-16 bg-surface py-20">
@@ -18,13 +19,18 @@ import { Reveal } from '../../shared/directives/reveal.directive';
 
         <div appReveal class="grid gap-12 md:grid-cols-5">
           <!-- Bio -->
-          <div class="space-y-4 md:col-span-3">
-            @for (paragraph of profile.bio; track $index) {
-              <p class="text-lg leading-relaxed text-muted">{{ paragraph }}</p>
-            }
-            <p class="pt-2 text-sm font-medium text-muted">
-              📍 {{ profile.location }}
-            </p>
+          <div class="md:col-span-3">
+            <!-- Carrusel de logos de tecnologías (bucle continuo) -->
+            <app-tech-marquee />
+
+            <div class="mt-8 space-y-4">
+              @for (paragraph of profile.bio; track $index) {
+                <p class="text-lg leading-relaxed text-muted">{{ paragraph }}</p>
+              }
+              <p class="pt-2 text-sm font-medium text-muted">
+                📍 {{ profile.location }}
+              </p>
+            </div>
           </div>
 
           <!-- Stack -->
