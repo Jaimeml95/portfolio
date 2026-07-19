@@ -33,9 +33,21 @@ src/app/
 Proyecto en desarrollo por fases:
 
 - [x] **Fase 0** — Setup: Angular + Tailwind, sistema de diseño, routing, dark mode base
-- [ ] **Fase 1** — Layout: header, footer, toggle de tema
-- [ ] **Fase 2** — Home + Sobre mí
-- [ ] **Fase 3** — Proyectos (galería + detalle)
-- [ ] **Fase 4** — Contacto (formulario)
-- [ ] **Fase 5** — Pulido (responsive, SEO, CV)
-- [ ] **Fase 6** — Despliegue
+- [x] **Fase 1** — Layout: header, footer, toggle de tema
+- [x] **Fase 2** — Home + Sobre mí
+- [x] **Fase 3** — Proyectos (galería + detalle)
+- [x] **Fase 4** — Contacto (formulario)
+- [x] **Fase 5** — Pulido (responsive, SEO, CV)
+- [x] **Fase 6** — Despliegue (Vercel)
+
+## Despliegue
+
+Configurado para **Vercel** (ver `vercel.json`):
+
+- **Build:** `npm run build`
+- **Output:** `dist/portfolio/browser`
+- **Rewrites:** todas las rutas → `index.html` (necesario para el enrutado SPA)
+
+Con el repositorio conectado a Vercel, cada `git push` a la rama principal
+despliega automáticamente. Para el formulario de contacto, define tu endpoint
+de Formspree en `src/app/core/data/profile.ts` (`FORMSPREE_ENDPOINT`).
