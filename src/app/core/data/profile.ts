@@ -1,12 +1,7 @@
 import { Profile } from '../models/profile.model';
 
-/**
- * Endpoint de Formspree para el formulario de contacto (sin backend propio).
- * Crea un formulario gratis en https://formspree.io y pega aquí tu URL
- * (formato: https://formspree.io/f/xxxxxxx). Mientras contenga TU_ID, el
- * envío fallará a propósito y el formulario mostrará el estado de error.
- */
-export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/TU_ID';
+/** Endpoint de Formspree para el formulario de contacto (sin backend propio). */
+export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xykrdgna';
 
 /** Datos del perfil que alimentan hero, "Sobre mí", contacto y footer. */
 export const PROFILE: Profile = {
