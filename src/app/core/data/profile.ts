@@ -23,6 +23,7 @@ export const PROFILE: Profile = {
   email: 'jaimemorolopez@gmail.com',
   socials: [
     { label: 'GitHub', href: 'https://github.com/Jaimeml95', icon: 'github' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jaimemorolopez', icon: 'linkedin' },
     { label: 'Email', href: 'mailto:jaimemorolopez@gmail.com', icon: 'mail' },
     { label: 'Teléfono', href: 'tel:+34647046923', icon: 'phone' },
   ],
