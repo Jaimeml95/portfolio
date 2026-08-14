@@ -32,11 +32,11 @@ import { Reveal } from '../../../shared/directives/reveal.directive';
             <button
               type="button"
               (click)="setFilter(null)"
-              [class.bg-brand]="activeTech() === null"
-              [class.border-brand]="activeTech() === null"
-              [class.text-brand-foreground]="activeTech() === null"
-              [class.text-muted]="activeTech() !== null"
-              class="rounded-full border border-border px-4 py-1.5 text-sm font-medium transition hover:border-brand hover:text-brand"
+              class="rounded-full border px-4 py-1.5 text-sm font-medium transition {{
+                activeTech() === null
+                  ? 'border-brand bg-brand text-brand-foreground'
+                  : 'border-border text-muted hover:border-brand hover:text-brand'
+              }}"
             >
               Todos
             </button>
@@ -44,11 +44,11 @@ import { Reveal } from '../../../shared/directives/reveal.directive';
               <button
                 type="button"
                 (click)="setFilter(tech)"
-                [class.bg-brand]="activeTech() === tech"
-                [class.border-brand]="activeTech() === tech"
-                [class.text-brand-foreground]="activeTech() === tech"
-                [class.text-muted]="activeTech() !== tech"
-                class="rounded-full border border-border px-4 py-1.5 text-sm font-medium transition hover:border-brand hover:text-brand"
+                class="rounded-full border px-4 py-1.5 text-sm font-medium transition {{
+                  activeTech() === tech
+                    ? 'border-brand bg-brand text-brand-foreground'
+                    : 'border-border text-muted hover:border-brand hover:text-brand'
+                }}"
               >
                 {{ tech }}
               </button>
