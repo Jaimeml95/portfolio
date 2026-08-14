@@ -32,7 +32,11 @@ const GRADIENTS = [
           <div
             class="flex h-full w-full items-center justify-center bg-linear-to-br {{ gradient() }}"
           >
-            <app-icon name="code" class="h-12 w-12 text-white/80" />
+            <img
+              src="images/tech/angular.svg"
+              alt=""
+              class="h-16 w-16 opacity-90 drop-shadow-lg"
+            />
           </div>
         }
         @if (project().featured) {
