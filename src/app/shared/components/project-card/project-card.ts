@@ -28,15 +28,15 @@ const GRADIENTS = [
             [alt]="project().title"
             class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
           />
+        } @else if (project().id === 'portfolio-angular') {
+          <div class="flex h-full w-full items-center justify-center bg-white">
+            <img src="images/tech/angular.svg" alt="" class="h-16 w-16" />
+          </div>
         } @else {
           <div
             class="flex h-full w-full items-center justify-center bg-linear-to-br {{ gradient() }}"
           >
-            <img
-              src="images/tech/angular.svg"
-              alt=""
-              class="h-16 w-16 opacity-90 drop-shadow-lg"
-            />
+            <app-icon name="code" class="h-12 w-12 text-white/80" />
           </div>
         }
         @if (project().featured) {
