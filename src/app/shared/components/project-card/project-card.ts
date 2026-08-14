@@ -29,7 +29,7 @@ const GRADIENTS = [
             class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
           />
         } @else if (project().id === 'portfolio-angular') {
-          <div class="flex h-full w-full items-center justify-center bg-white">
+          <div class="flex h-full w-full items-center justify-center bg-black">
             <img src="images/tech/angular.svg" alt="" class="h-16 w-16" />
           </div>
         } @else {
