@@ -11,6 +11,13 @@ const GRADIENTS = [
   'from-cyan-600 to-teal-700',
 ];
 
+/** Logo de la tecnología principal, mostrado sobre el degradado cuando no hay imagen. */
+const LOGOS: Record<string, string> = {
+  'portfolio-angular': 'images/tech/angular.svg',
+  'api-rest-spring-boot': 'images/tech/spring.svg',
+  'app-android-java': 'images/tech/android-studio.svg',
+};
+
 @Component({
   selector: 'app-project-card',
   imports: [RouterLink, Icon],
@@ -28,15 +35,15 @@ const GRADIENTS = [
             [alt]="project().title"
             class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
           />
-        } @else if (project().id === 'portfolio-angular') {
-          <div class="flex h-full w-full items-center justify-center bg-black">
-            <img src="images/tech/angular.svg" alt="" class="h-16 w-16" />
-          </div>
         } @else {
           <div
             class="flex h-full w-full items-center justify-center bg-linear-to-br {{ gradient() }}"
           >
-            <app-icon name="code" class="h-12 w-12 text-white/80" />
+            @if (logo(); as logoSrc) {
+              <img [src]="logoSrc" alt="" class="h-16 w-16 drop-shadow-lg" />
+            } @else {
+              <app-icon name="code" class="h-12 w-12 text-white/80" />
+            }
           </div>
         }
         @if (project().featured) {
@@ -88,4 +95,6 @@ export class ProjectCard {
     const hash = [...id].reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
     return GRADIENTS[hash % GRADIENTS.length];
   });
+
+  protected readonly logo = computed(() => LOGOS[this.project().id] ?? null);
 }
