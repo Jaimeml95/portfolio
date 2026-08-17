@@ -3,13 +3,8 @@ import { RouterLink } from '@angular/router';
 import { Project } from '../../../core/models/project.model';
 import { Icon } from '../icon/icon';
 
-/** Degradados sobrios para el banner cuando el proyecto no tiene imagen. */
-const GRADIENTS = [
-  'from-blue-600 to-indigo-700',
-  'from-sky-600 to-blue-700',
-  'from-slate-700 to-slate-900',
-  'from-cyan-600 to-teal-700',
-];
+/** Degradado sobrio para el banner cuando el proyecto no tiene imagen. */
+const GRADIENT = 'from-slate-700 to-slate-900';
 
 /** Logo de la tecnología principal, mostrado sobre el degradado cuando no hay imagen. */
 const LOGOS: Record<string, string> = {
@@ -37,7 +32,7 @@ const LOGOS: Record<string, string> = {
           />
         } @else {
           <div
-            class="flex h-full w-full items-center justify-center bg-linear-to-br {{ gradient() }}"
+            class="flex h-full w-full items-center justify-center bg-linear-to-br {{ GRADIENT }}"
           >
             @if (logo(); as logoSrc) {
               <img [src]="logoSrc" alt="" class="h-16 w-16 drop-shadow-lg" />
@@ -90,11 +85,7 @@ const LOGOS: Record<string, string> = {
 export class ProjectCard {
   readonly project = input.required<Project>();
 
-  protected readonly gradient = computed(() => {
-    const id = this.project().id;
-    const hash = [...id].reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
-    return GRADIENTS[hash % GRADIENTS.length];
-  });
+  protected readonly GRADIENT = GRADIENT;
 
   protected readonly logo = computed(() => LOGOS[this.project().id] ?? null);
 }
