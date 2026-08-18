@@ -19,9 +19,9 @@ import { TechMarquee } from '../../shared/components/tech-marquee/tech-marquee';
 
         <div appReveal class="grid gap-12 md:grid-cols-5">
           <!-- Bio -->
-          <div class="flex flex-col md:col-span-3">
+          <div class="flex min-w-0 flex-col md:col-span-3">
             <!-- Carrusel de logos de tecnologías (bucle continuo) -->
-            <app-tech-marquee />
+            <app-tech-marquee class="block min-w-0" />
 
             <!-- El texto se centra verticalmente en el espacio restante (escritorio) -->
             <div class="mt-10 flex flex-1 items-center md:mt-0">
