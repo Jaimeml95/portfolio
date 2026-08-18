@@ -6,7 +6,7 @@
     "description": "Portfolio personal construido con Angular 22 (standalone components, signals, zoneless) y TailwindCSS v4. Incluye un sistema de diseño propio con modo claro/oscuro, componentes reutilizables, carga de datos con HttpClient, formulario reactivo con validaciones y animaciones sutiles. Pensado como muestra de código limpio y buenas prácticas en frontend.",
     "technologies": ["Angular", "TypeScript", "TailwindCSS", "Signals"],
     "image": "",
-    "repoUrl": "https://github.com/Jaimeml95",
+    "repoUrl": "https://github.com/Jaimeml95/portfolio",
     "demoUrl": "",
     "featured": true,
     "date": "2026-07-01"
