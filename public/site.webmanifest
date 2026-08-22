@@ -1,0 +1,20 @@
+{
+  "name": "Jaime Moro López · Portfolio",
+  "short_name": "JML Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1120",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

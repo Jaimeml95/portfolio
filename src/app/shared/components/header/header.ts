@@ -23,11 +23,13 @@ interface NavItem {
           [fragment]="'inicio'"
           class="flex items-center gap-2 font-extrabold tracking-tight text-foreground"
         >
-          <span
-            class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-brand-foreground"
-          >
-            <app-icon name="code" class="h-5 w-5" />
-          </span>
+          <img
+            src="favicon-48.png"
+            alt="Logo JML"
+            class="h-8 w-8 rounded-lg"
+            width="32"
+            height="32"
+          />
           <span class="text-lg">Portfolio</span>
         </a>
 
